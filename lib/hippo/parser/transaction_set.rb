@@ -31,7 +31,7 @@ module Hippo
       def read(input = nil)
         input ||= ''
 
-        @unparsed_data = input.gsub(/[\a\e\f\n\r\t\v]/,'')
+        @unparsed_data = input.gsub(/[\a\e\f\r\t\v]/,'')
         parse_separators(@unparsed_data)
       end
 
